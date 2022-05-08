@@ -12,12 +12,13 @@ export default function TextForm(props) {
         console.log('changed')
         setText(event.target.value)
     }
+   
 const [text, setText] = useState('Enter text here');
 return (
     <div>
         <h1>{props.heading}</h1>
         <div className="mb-3">
-        <textarea className="form-control"onChange={handleOnChange} value={text}id="myBox" rows="8"></textarea>
+        <textarea className="form-control"onChange={handleOnChange} id="myBox" rows="8" placeholder='Enter text here'></textarea>
         </div>
         <button className="btn btn-primary"  onClick={handleUpClick}>Convert to uppercase</button>
     </div>
